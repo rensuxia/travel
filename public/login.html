@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<!--网页顶部-->
+<div id="top">
+    <!--网页顶部-->
+    <div id="user-prefs">
+        <!--logo-->
+        <img src="img/logo.png">
+        <!--欢迎语-->
+        <p class="left">欢迎来到旅游网站</p>
+        <ul class="right">
+            <li id="welcome">
+                <a href="register.html">[注册]</a>
+                <a href="login.html">[登录]</a>
+            </li>
+            <li class="about">
+                <b></b>
+                <a href="#">关注我们</a>
+                <div id="about">
+                    <div class="lfzwebChat"></div>
+                    <div class="lklwebChat"></div>
+                </div>
+            </li>
+            <li class="service">
+                <b></b>
+                <a href="#">服务</a>
+                <ul id="service-items">
+                    <li>
+                        <a href="#">帮助中心</a>
+                    </li>
+                    <li>
+                        <a href="#">售后服务</a>
+                    </li>
+                    <li>
+                        <a href="#">在线服务</a>
+                    </li>
+                    <li>
+                        <a href="#">投诉中心</a>
+                    </li>
+                    <li>
+                        <a href="#">客服邮箱</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="container">
+    <form class="box">
+        <div class="box-content">
+            <label for="uname">用户名：</label>
+            <input  id="uname" placeholder="请输入您的用户名" required autofocus>
+        </div>
+         <div class="box-content">
+               <label for="upwd">密&nbsp;&nbsp;码：</label>
+               <input  id="upwd" placeholder="请输入您的密码" required >
+         </div>
+        <div class="box-content">
+            <span id="vcode">验证码:</span>
+            <input type="text" class="vcode">
+            <canvas id="c1">您的浏览器不支持canvas</canvas>
+        </div>
+        <div class="box-content" id="input-btn">
+            <input id="bt_login" type="submit" value="登录" class="btn" required>
+            <input type="reset" value="重置" class="btn btn-danger" required>
+        </div>
+
+    </form>
+</div>
+
+<footer>
+    <div id="go">
+        <img src="img/lllll.gif" alt="">
+    </div>
+</footer>
+<script src="js/Vcode.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

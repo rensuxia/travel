@@ -1,0 +1,816 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    line-height: 1.5em;
+    font-family: KaiTi;
+    color: #666;
+    background: rgba(240,240,240, .6);
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color: #726f6f;
+}
+a:hover{
+    color: #00f;
+    text-decoration:none;
+    cursor: pointer;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+#top,#main,#footer-box,#footer-container,#footer{
+    width: 1260px;
+    margin:0 auto;
+}
+
+/**导航栏的设置*/
+#top{
+    height: 30px;
+}
+#user-prefs{
+    float: left;
+    background: rgba(255,255,255,1);
+    line-height: 30px;
+    /*border-bottom: 1px solid #DDDDDD;*/
+    width: inherit;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    /*position: absolute;*/
+    top:0;
+}
+/*logo*/
+#user-prefs img{
+    float: left;
+    width: 60px;
+    height: 28px;
+}
+#user-prefs>ul>li{
+    float: left;
+    height: 30px;
+    margin-right: 13px;
+}
+#user-prefs ul li>i{
+    width: 30px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ccc transparent transparent transparent;
+    line-height: 30px;
+    position: relative;
+    top: -15px;
+    right: -45px;
+}
+#user-prefs>ul>li>b{
+    border-left: 1px solid #ddd;
+    margin:  0 9px;
+}
+#user-prefs ul li.about{
+    width: 120px;
+}
+#user-prefs li.service{
+    position: relative;
+}
+#user-prefs #welcome a{
+    font-size: 20px;
+    color: #000000;
+}
+#user-prefs #welcome a:hover{
+    color: #e4393c;
+    text-decoration: none;
+}
+#user-prefs li.service>a{
+    padding: 0 15px;
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background:url(../img/service_down.jpg) #fff no-repeat 96% center;
+}
+#service-items{
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-top: none;
+    width: 103px;
+    text-align: center;
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    display: none;
+    z-index: 20;
+}
+li.service:hover #service-items{
+    display: block;
+}
+
+#user-prefs li.service:hover>a{
+    background:url(../img/service_up.jpg) #fff no-repeat 96% center;
+}
+#about{
+    display:none;
+    position:relative;
+    left: 14px;
+    top:0px;
+    z-index:100;
+    width: 130px;
+    height:195px;
+    padding: 0px 0 0px 10px;
+    border:1px solid #DDD;
+    box-shadow:0 0 10px #DDD;
+}
+#about div.lfzwebChat,#about div.lklwebChat {
+    height:95px;
+    padding-left:100px;
+}
+#about div.lfzwebChat {
+    background:url(../img/lfz.png) 15px center no-repeat;
+}
+#about div.lklwebChat {
+    background:url(../img/lkl.jpg) 15px center no-repeat;
+}
+li.about:hover #about{
+    display: block;
+}
+
+#user-prefs>p{
+    color: #669D53;
+}
+
+
+/*绘制字体*/
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.woff'),url('../fonts/fontawesome-webfont.ttf'),url('../fonts/fontawesome-webfont.eot');
+}
+.fa {
+    font-family: 'FontAwesome';
+}
+
+/*页面主体：模块一：精彩，在于出发*/
+#main{
+    margin-top: 20px;
+}
+#start>p{
+    margin:0 0 10px 10px;
+    font-size:25px;
+    font-weight: bold;
+    margin-left: -15px;
+}
+#start>p i{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: normal;
+    margin-left: 4px;
+    font-style: normal;
+}
+/*出发的动画效果*/
+#go{
+    -webkit-animation: gogo 5s linear infinite;
+    -moz-animation: gogo 5s linear infinite;
+    -ms-animation:gogo 5s linear infinite;
+    -o-animation: gogo 5s linear infinite;
+    animation:gogo 5s linear infinite;
+    margin-left: 0;
+    font-size: 36px;
+    font-style: italic;
+    font-family: "SimHei";
+}
+@keyframes gogo{
+    50% {
+        margin-left:999px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    100% {
+        margin-left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+/**页面主体：模块二：8幅图像--*/
+#start-img li{
+    float: left;
+    width: 295px;
+    height: 190px;
+    margin:0 0 10px 20px;
+    border-radius: 26px;
+    /*过渡效果*/
+    -webkit-transition: background 0.3s linear;
+    -moz-transition: background 0.3s linear;
+    -ms-transition: background 0.3s linear;
+    -o-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+}
+#start-img>li:hover{
+    background-position: -10px 0px;
+}
+#start-img li.shanshui01{
+    background-image: url("../img/08shan.png") ;
+}
+#start-img li.shanshui02{
+    background-image: url("../img/01shan.png");
+}
+#start-img li.shanshui03{
+    background-image: url("../img/03shan.png");
+}
+#start-img li.shanshui04{
+    background-image: url("../img/04shan.png");
+}
+#start-img li.shanshui05{
+    background-image: url("../img/07shan.png");
+}
+#start-img li.shanshui06{
+    background-image: url("../img/06shan.png");
+}
+#start-img li.shanshui07{
+    background-image: url("../img/02shan.png");
+}
+#start-img li.shanshui08{
+     background-image: url("../img/05shan.png");
+ }
+#start-img>li>a{
+    display: block;
+    width:295px;
+    height:190px;
+    color: #fff;
+    position: absolute;
+}
+#start-img>li{
+    position:relative;
+}
+/*模块二：8幅图像--遮罩层*/
+#start-img>li>b{
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: 25px;
+    background:rgba(255,255,255,.3);
+}
+#start-img>li>div{
+    position: absolute;
+    top:30px;
+    left: 20px;
+}
+#start-img>li h3{
+    color:#4dc71f;
+}
+/*2、页面主体圆圈过渡*/
+/*解决上一个块计元素浮动带来的问题*/
+#circle{
+    margin-top:20px ;
+}
+#circle:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#circle ul li{
+    float: left;
+    width: 150px;
+    height:150px;
+    margin: 15px 135px 0;
+    border-radius: 50%;
+    background: rgba(180,240,200,.8);
+}
+/*当鼠标悬浮时动画效果，使圆转起来*/
+#circle ul li:hover{
+    -webkit-animation:yuan 3s linear infinite;
+    -moz-animation:yuan 3s linear infinite;
+    -ms-animation:yuan 3s linear infinite;
+    -o-animation:yuan 3s linear infinite;
+    animation:yuan 3s linear infinite;
+}
+@keyframes yuan {
+    0%{
+        margin-left:135px;
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+#circle ul li #page,#circle ul li #heart,#circle ul li #star{
+    display: block;
+    text-align: center;
+    padding-top: 58px;
+    color:#fff;
+    font-size:8em;
+}
+#circle ul li #heart{
+    font-size:7em;
+    padding-top: 68px;
+}
+#circle ul li #star{
+    padding-top: 60px;
+}
+/*中国最美名山*/
+#mountain{
+    margin-top: 20px;
+    height:420px;
+}
+#header{
+    height:40px;
+}
+#header>p{
+    float: left;
+    width: 250px;
+    height:40px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 12px;
+    border-radius: 15px;
+    background: #ddd;
+    text-align: center;
+}
+#header ul{
+    float: left;
+    margin-left: 50px
+}
+#header ul.mountain-list li{
+    float: left;
+    width: 190px;
+    height:40px;
+    border-bottom: 2px solid #ddd;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 15px;
+}
+#header ul.mountain-list li.current{
+    color: #e4393c;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #e4393c;
+    border-bottom: none;
+
+}
+#header ul.mountain-list li:hover{
+    padding-top: 10px;
+    color: #e4393c;
+}
+#header ul.mountain-list li a:hover{
+    color: #e4393c;
+}
+/*mountain-detail*/
+#mountain>[id^='mountain-detail_']{display:none}
+#mountain>.show{display:block}
+/*清除浮动带来的影响*/
+#header:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*文本设置*/
+div.txt{
+    float: left;
+    width:230px;
+    height:400px;
+    text-align: justify;
+    margin-right: 76px;
+}
+/*山景设置*/
+div.slider{
+    position:relative;
+    overflow: hidden;
+    height: 400px;
+}
+div.slider > img {   /*轮播广告的图片，绝对定位，zIndex为-1*/
+    display: block;
+    width:925px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 15px;
+    vertical-align:bottom;
+}
+div.slider > img.active {  /*显示在最上方的广告图片*/
+    z-index: auto;
+}
+/*山景图片框设置介绍*/
+#mountain-detail_HS,#mountain-detail_CS,#mountain-detail_HG,#mountain-detail_TAI,#mountain-detail_HUA{
+    /*宽度，高度，左浮动，上左外边距*/
+    width:1230px;
+    height:400px;
+    float:left;
+    margin:20px 0 0 10px;
+}
+/*中国古镇--名称介绍*/
+#town{
+    height:360px;
+    margin-bottom: 30px;
+}
+#town header p{
+    float: left;
+    width: 250px;
+    height:40px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 12px;
+    border-radius: 15px;
+    background: #ddd;
+    text-align: center;
+}
+div.floor header ul{
+    float: left;
+}
+div.floor header ul.town_list li{
+    float: left;
+    width: 185px;
+    height:40px;
+    border-radius:15px;
+    background: rgba(180,240,200,.8);
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 15px;
+    margin-left: 16px;
+}
+div.floor header ul.town_list li.current{
+    color: #e4393c;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #e4393c;
+}
+div.floor header ul.town_list li:hover{
+    color: #e4393c;
+    padding-top: 10px;
+}
+div.floor header ul.town_list li a:hover{
+    color: #e4393c;
+    font-weight: bold;
+}
+/*古镇简介--class切换*/
+#town_intro{
+    float: left;
+    width: 230px;
+    height:160px;
+    padding-top: 12px;
+}
+#town>[id^='town_img_']{
+    display:none;
+    float: left;
+    margin-left: 25px;
+}
+#town>.show{
+    display:block;
+}
+#town img{
+   padding: 15px 0 0 15px;
+}
+#town img:hover{
+    animation: fadeIn 1s linear;
+    transition: 0.7s;
+    transform: rotate(-1deg);
+}
+/*中国海景介绍--名称介绍*/
+#sea{
+    margin-top:30px;
+    height:350px;
+}
+#sea header p{
+    float: left;
+    width: 250px;
+    height:40px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 12px;
+    border-radius: 15px;
+    background: #ddd;
+    text-align: center;
+}
+div.floor header ul{
+    float: left;
+}
+div.floor header ul.sea_list li{
+    float: left;
+    width: 185px;
+    height:40px;
+    border-radius:15px;
+    background: rgba(180,240,200,.8);
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 15px;
+    margin-left: 16px;
+}
+div.floor header ul.sea_list li.current{
+    color: #e4393c;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #e4393c;
+}
+div.floor header ul.sea_list li:hover{
+    color: #e4393c;
+    padding-top: 10px;
+}
+div.floor header ul.sea_list li a:hover{
+    color: #e4393c;
+    font-weight: bold;
+}
+/*海的简介--class切换*/
+#sea_intro{
+    float: left;
+    width: 230px;
+    height:160px;
+    padding-top: 12px;
+}
+#sea>[id^='sea_img_']{
+    display:none;
+    float: left;
+    margin-left: 25px;
+}
+#sea>.show{
+    display:block;
+}
+#sea img{
+    padding: 15px 0 0 15px;
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0.3;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#sea img:hover{
+    animation: fadeIn 1s linear;
+    transition: 0.7s;
+    transform: rotate(-1deg);
+}
+/*中国花海介绍--名称介绍*/
+#flower{
+    margin-top:10px;
+    height:350px;
+}
+#flower header p{
+    float: left;
+    width: 250px;
+    height:40px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 12px;
+    border-radius: 15px;
+    background: #ddd;
+    text-align: center;
+}
+div.floor header ul{
+    float: left;
+}
+div.floor header ul.flower_list li{
+    float: left;
+    width: 185px;
+    height:40px;
+    border-radius:15px;
+    background: rgba(180,240,200,.8);
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 15px;
+    margin-left: 16px;
+}
+div.floor header ul.flower_list li.current{
+    color: #e4393c;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #e4393c;
+}
+div.floor header ul.flower_list li:hover{
+    color: #e4393c;
+    padding-top: 10px;
+}
+div.floor header ul.flower_list li a:hover{
+    color: #e4393c;
+    font-weight: bold;
+}
+/*各种花的简介*/
+#flower_intro{
+    float: left;
+    width: 230px;
+    height:160px;
+    padding-top: 12px;
+}
+#flower>[id^='flower_img_']{
+    display:none;
+    float: left;
+    margin-left: 25px;
+}
+#flower>.show{
+    display:block;
+}
+#flower img{
+    padding: 15px 0 0 15px;
+    opacity: 1;
+}
+#flower img:hover{
+    animation: fadeIn 1s linear;
+    transition: .7s;
+    transform: rotate(-1deg);
+}
+/*中国瀑布*/
+#waterfall{
+    margin-top:10px;
+    height:300px;
+}
+#waterfall header p{
+    float: left;
+    width: 250px;
+    height:40px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 12px;
+    border-radius: 15px;
+    background: #ddd;
+    text-align: center;
+}
+div.floor header ul{
+    float: left;
+}
+div.floor header ul.waterfall_list li{
+    float: left;
+    width: 185px;
+    height:40px;
+    border-radius:15px;
+    background: rgba(180,240,200,.8);
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 15px;
+    margin-left: 16px;
+}
+div.floor header ul.waterfall_list li.current{
+    color: #e4393c;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #e4393c;
+}
+div.floor header ul.waterfall_list li:hover{
+    color: #e4393c;
+    padding-top: 10px;
+}
+div.floor header ul.waterfall_list li a:hover{
+    color: #e4393c;
+    font-weight: bold;
+}
+/*瀑布简介*/
+#waterfall_intro{
+    float: left;
+    width: 230px;
+    height:160px;
+    padding-top: 12px;
+}
+#waterfall>[id^='waterfall_img_']{
+    display:none;
+    float: left;
+    margin-left: 25px;
+}
+#waterfall>.show{
+    display:block;
+}
+#waterfall img{
+    padding: 15px 0 0 15px;
+    opacity: 1;
+}
+#waterfall img:hover{
+    animation: fadeIn 1s linear;
+    transition: .7s;
+    transform: rotate(-1deg);
+}
+/*清除上一个元素waterfall带来的浮动问题*/
+#main:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+#footer-box{
+    margin-top:30px;
+}
+/*更多美景*/
+#more{
+    height: 200px;
+    position: relative;
+}
+#more li{
+    float: left;
+    padding-left: 10px;
+}
+#footer-box>h3{
+    margin:10px 0 6px 0;
+}
+#more div.half-mask{
+    background-color: rgba(0,0,0,0.2);
+    width:16%;
+    height:18%;
+    position: absolute;
+    top:52%;
+    transition: top 1s;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom:20px;
+}
+#more div.half-mask:hover{
+    top:0;
+    height:75%;
+}
+#more div.half-mask p>a{
+    color: #e4393c;
+    font-weight: bold;
+}
+#more div{
+    padding:15px 0 29px 30px;
+}
+/*最多足迹*/
+#most{
+    height:200px;
+    position: relative;
+}
+#most li{
+    float: left;
+    padding-left: 10px;
+}
+#most div.half-mask{
+    background-color: rgba(0,0,0,0.2);
+    width:16%;
+    height:18%;
+    position: absolute;
+    top:52%;
+    transition: top 1s;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom:20px;
+}
+#most div.half-mask:hover{
+    top:0;
+    height:75%;
+}
+#most div.half-mask p>a{
+    color: #e4393c;
+    font-weight: bold;
+}
+#most div{
+    padding:15px 0 29px 30px;
+}
+/*页面底部*/
+#footer-container{
+    margin: 10px auto;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+    padding-top: 10px;
+    background: #FFFFFF;
+    font-family: SimHei;
+}
+#footer-container p{
+    width: 40px;
+    height: 40px;
+    background: url("../img/you.png")no-repeat;
+    float: left;
+    margin: 0 10px 0 50px;
+}
+#footer-container ul{
+    float: left;
+    width: 142px;
+    line-height: 20px;
+}
+#footer-container li{
+    line-height: 20px;
+}
+#footer-container li b{
+    line-height: 30px;
+}
+/*模块7：页面底部-备案号等*/
+#footer{
+    text-align:center;
+    background: #FFFFFF;
+    font-family: SimHei;
+}
+#footer i{
+    border-left:1px solid #CABBA9;
+    margin:8px;
+}
+#footer img{
+    margin:20px;
+}
+#footer-box a,#footer a{
+    color: #000000;
+}

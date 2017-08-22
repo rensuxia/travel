@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游网站首页</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<div id="top">
+	<!--网页顶部-->
+	<div id="user-prefs">
+		<!--logo-->
+		<img src="img/logo.png">
+		<!--欢迎语-->
+		<p class="lf">欢迎来到旅游网站</p>
+		<ul class="rt">
+			<li id="welcome">
+				<a href="register.html">[注册]</a>
+				<a href="login.html">[登录]</a>
+			</li>
+			<li class="about">
+				<b></b>
+				<a href="#">关注我们</a>
+				<div id="about">
+					<div class="lfzwebChat"></div>
+					<div class="lklwebChat"></div>
+				</div>
+			</li>
+			<li class="service">
+				<b></b>
+				<a href="#">服务</a>
+				<ul id="service-items">
+					<li>
+						<a href="#">帮助中心</a>
+					</li>
+					<li>
+						<a href="#">售后服务</a>
+					</li>
+					<li>
+						<a href="#">在线服务</a>
+					</li>
+					<li>
+						<a href="#">投诉中心</a>
+					</li>
+					<li>
+						<a href="#">客服邮箱</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--导航-->
+<nav id="nav"></nav>
+<!--header部分-->
+<div id="header">
+	<!--背景视频以及搜索框-->
+	<div class="header">
+		<video id="tripvideo" class="video-js" autoplay muted loop="loop" poster="img/poster.png">
+			<source src="res/video.webm" type="video/webm">
+			<source src="res/video.mp4" type="video/mp4">
+		</video>
+		<div class="header-inner">
+			<div class="slogan">
+				<p>不同视野看世界</p>
+				<span>精彩世界！精彩人生！</span>
+			</div>
+			<div class="header-searchbox">
+				<input type="text" placeholder="亲，您想去哪？">
+				<input class="search-btn" type="submit" value="搜索">
+			</div>
+		</div>
+	</div>
+	<!--<div class="info">-->
+		<!--<span>中国之最!</span>-->
+		<!--<span>世界之最!</span>-->
+	<!--</div>-->
+</div>
+<!--广告-->
+<div id="slider-box">
+	<div id="slider">
+		<a href="#"><img class="active" src="img/carousel02.jpg"></a>
+		<a href="#"><img src="img/carousel03.jpg"></a>
+		<a href="#"><img src="img/carousel04.jpg"></a>
+	</div>
+</div>
+<!--main-->
+<div id="main">
+	<!--上半部分-->
+	<div class="section">
+		<ul class="regionTabs">
+			<li data-id="1" data-name="asia" class="active">
+				<a href="#">亚洲</a>
+			</li>
+			<li data-id="2" data-name="europe">
+				<a href="#">欧洲</a>
+			</li>
+			<li data-id="3" data-name="america">
+				<a href="#">美洲</a>
+			</li>
+			<li data-id="4" data-name="south_pacific">
+				<a href="#">大洋洲</a>
+			</li>
+			<li data-id="5" data-name="global">
+				<a href="#">全球</a>
+			</li>
+		</ul>
+		<ul class="regionContent">
+			<li data-id="1" class="active">
+				<ul class="asia">
+					<li>
+						<a href="China.html"><img src="img/asia01.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia02.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia03.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia04.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia05.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia06.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia07.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia08.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/asia09.jpg"></a>
+					</li>
+				</ul>
+			</li>
+			<li data-id="2">
+				<ul class="europe">
+					<li>
+						<a href="China.html"><img src="img/europe01.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe02.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe03.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe04.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe05.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe06.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe07.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe08.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/europe09.jpg"></a>
+					</li>
+				</ul>
+			</li>
+			<li data-id="3">
+				<ul class="america">
+					<li>
+						<a href="China.html"><img src="img/america01.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america02.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america03.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america04.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america05.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america06.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america07.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america08.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/america09.jpg"></a>
+					</li>
+				</ul>
+			</li>
+			<li data-id="4">
+				<ul class="south_pacific">
+					<li>
+						<a href="China.html"><img src="img/south_pacific01.bmp"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific02.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific03.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific04.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific05.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific06.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific07.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific08.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/south_pacific09.jpg"></a>
+					</li>
+				</ul>
+			</li>
+			<li data-id="5">
+				<ul class="global">
+					<li>
+						<a href="China.html"><img src="img/global01.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global02.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global03.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global04.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global05.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global06.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global07.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global08.jpg"></a>
+					</li>
+					<li>
+						<a href="China.html"><img src="img/global09.jpg"></a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--最新景点-->
+	<div class="revolve r_odd">
+		<div class="container">
+			<h2>中国之最</h2>
+			<ul class="clearfloat">
+				<li class="lg">
+					<a href="China.html">
+						<div>
+							<img src="img/china.jpg">
+							<span>中国</span>
+							<em>最美风景旅游全攻略</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/china-mountain.jpg">
+							<span>名山</span>
+							<em>如何畅玩中国名山</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最美名山</p>
+							<p>畅游山水</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/china-guzhen.jpg">
+							<span>古镇</span>
+							<em>如何玩转中国古镇</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最全古镇</p>
+							<p>领略中国古文化之美</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/china-sea.jpg">
+							<span>海景</span>
+							<em>带你过一个不一样的夏季</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国之美</p>
+							<p>领略中国海景之美</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/china-flower.jpg">
+							<span>花</span>
+							<em>春暖花开</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>花城</p>
+							<p>畅游花海</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/china-pubu.jpg">
+							<span>瀑布</span>
+							<em>观赏瀑布的气势</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>水美</p>
+							<p>中国水之美</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/china-more.jpg">
+							<span>点击查看更多</span>
+							<em>带你领略不一样的中国</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国风景</p>
+							<p>领略中国海景之美</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+    <!--国外游-->
+	<div class="revolve r_even">
+		<div class="container">
+			<h2>国外游</h2>
+			<ul class="clearfloat">
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign01.jpg">
+							<span>名山</span>
+							<em>如何畅玩中国名山</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最美名山</p>
+							<p>畅游山水</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign02.jpg">
+							<span>名山</span>
+							<em>如何畅玩中国名山</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最美名山</p>
+							<p>畅游山水</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign03.png">
+							<span>悉尼歌剧院</span>
+							<em>领略音乐之美</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>陶冶情操</p>
+							<p>身临其境</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign04.jpg">
+							<span>名山</span>
+							<em>如何畅玩中国名山</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最美名山</p>
+							<p>畅游山水</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign05.jpg">
+							<span>名山</span>
+							<em>如何畅玩中国名山</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最美名山</p>
+							<p>畅游山水</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign06.jpg">
+							<span>樱花</span>
+							<em>高傲，却从不张扬</em>
+						</div>
+						<div class="back">
+							<p>樱花之美</p>
+							<p>世间本无林黛玉，何处寻觅葬花人。花谢花飞飞满天，纵使有葬花的心，也实在不敢卖弄葬花的矫情</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign07.jpg">
+							<span>埃菲尔铁塔</span>
+							<em>首都的眺望台</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>铁娘子</p>
+							<p>无论何时，无论何地，只要你肯回头，我就一直在你身后</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign08.jpg">
+							<span>比萨斜塔</span>
+							<em>巍然屹立</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>高傲威严</p>
+							<p>给心灵以朦胧的希望，温和而又坚强，耸立，倾斜却不塌陷</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign09.jpg">
+							<span>瀑布</span>
+							<em>观赏瀑布的气势</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>水美</p>
+							<p>中国水之美</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/foreign10.jpg">
+							<span>点击查看更多</span>
+							<em>带你领略不一样的中国</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国风景</p>
+							<p>领略中国海景之美</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--穷游-->
+	<div class="revolve r_odd">
+		<div class="container">
+			<h2>穷游</h2>
+			<ul class="clearfloat">
+				<li class="lg">
+					<a href="China.html">
+						<div>
+							<img src="img/qiongyou.jpg">
+							<span>古镇</span>
+							<em>最美风景旅游全攻略</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/qiong01.jpg">
+							<span>名山</span>
+							<em>如何畅玩中国名山</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最美名山</p>
+							<p>畅游山水</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/qiong02.jpg">
+							<span>古镇</span>
+							<em>如何玩转中国古镇</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国最全古镇</p>
+							<p>领略中国古文化之美</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/qiong03.jpg">
+							<span>海景</span>
+							<em>带你过一个不一样的夏季</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国之美</p>
+							<p>领略中国海景之美</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/qiong04.jpg">
+							<span>花</span>
+							<em>春暖花开</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>花城</p>
+							<p>畅游花海</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/qiong05.jpg">
+							<span>瀑布</span>
+							<em>观赏瀑布的气势</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>水美</p>
+							<p>中国水之美</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="China.html">
+						<div class="front">
+							<img src="img/qiong06.jpg">
+							<span>点击查看更多</span>
+							<em>带你领略不一样的中国</em>
+						</div>
+						<div class="back">
+							<i class="icon_uid"></i>
+							<p>中国风景</p>
+							<p>领略中国海景之美</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 6、页面底部-旅游指南 -->
+<div id="footer-box">
+	<p class="shopping-guid"></p>
+	<ul>
+		<li>
+			<b>旅游指南</b>
+		</li>
+		<li>
+			<a href="#">旅游路线</a>
+		</li>
+		<li>
+			<a href="#">最优时间</a>
+		</li>
+		<li>
+			<a href="#">旅游人数</a>
+		</li>
+		<li>
+			<a href="#">最美山景</a>
+		</li>
+		<li>
+			<a href="#">唯美古镇</a>
+		</li>
+		<li>
+			<a href="#">您想去哪</a>
+		</li>
+	</ul>
+	<p class="shopping-guid"></p>
+	<ul>
+		<li>
+			<b>旅游景区</b>
+		</li>
+		<li>
+			<a href="#">国内美景</a>
+		</li>
+		<li>
+			<a href="#">亚洲美景</a>
+		</li>
+		<li>
+			<a href="#">欧洲美景</a>
+		</li>
+		<li>
+			<a href="#">山河之最</a>
+		</li>
+		<li>
+			<a href="#">锦绣山河</a>
+		</li>
+		<li>
+			<a href="#">旅游路线</a>
+		</li>
+	</ul>
+	<p class="shopping-guid"></p>
+	<ul>
+		<li>
+			<b>旅游说明</b>
+		</li>
+		<li>
+			<a href="#">最美之境</a>
+		</li>
+		<li>
+			<a href="#">关于我们</a>
+		</li>
+		<li>
+			<a href="#">地点介绍</a>
+		</li>
+		<li>
+			<a href="#">旅游花销</a>
+		</li>
+		<li>
+			<a href="#">联系我们</a>
+		</li>
+		<li>
+			<a href="#">时间规划</a>
+		</li>
+	</ul>
+	<p class="shopping-guid"></p>
+	<ul>
+		<li>
+			<b>关于穷游</b>
+		</li>
+		<li>
+			<a href="#">穷游路线</a>
+		</li>
+		<li>
+			<a href="#">穷游景区</a>
+		</li>
+		<li>
+			<a href="#">玩转穷游</a>
+		</li>
+		<li>
+			<a href="#">穷游时间</a>
+		</li>
+		<li>
+			<a href="#">穷游规划</a>
+		</li>
+		<li>
+			<a href="#">旅游路线</a>
+		</li>
+	</ul>
+	<p class="shopping-guid"></p>
+	<ul>
+		<li>
+			<b>国外旅游</b>
+		</li>
+		<li>
+			<a href="#">关于签证</a>
+		</li>
+		<li>
+			<a href="#">旅游费用</a>
+		</li>
+		<li>
+			<a href="#">旅游国家</a>
+		</li>
+		<li>
+			<a href="#">最美花海</a>
+		</li>
+		<li>
+			<a href="#">旅游路线</a>
+		</li>
+		<li>
+			<a href="#">亚洲之美</a>
+		</li>
+	</ul>
+</div>
+<!--尾部-->
+<footer id="footer">
+	<p>
+		<a href="#">关于我们</a>
+		<i></i>
+		<a href="#">联系我们</a>
+		<i></i>
+		<a href="#">人才招聘</a>
+		<i></i>
+		<a href="#">商家入驻</a>
+		<i></i>
+		<a href="#">广告服务</a>
+		<i></i>
+		<a href="#">手机京东</a>
+		<i></i>
+		<a href="#">友情链接</a>
+		<i></i>
+		<a href="#">销售联盟</a>
+		<i></i>
+		<a href="#">京东社区</a>
+		<i></i>
+		<a href="#">京东公益</a>
+	</p>
+	<p>
+		北京市公安局朝阳分局备案编号110105014669|京ICP证070359号|互联网药品信息服务资格证编号（京）-非经营性-2011-0034<br>
+		音像制品经营许可证宿迁批005号|出版物经营许可证编号新出发（苏）批字第N-012号|互联网出版许可证编号新出网证（京）字150号<br>
+		网络文化经营许可证京网文[2011]0168-061号Copyright&copy;2004-2014京东JD.com版权所有<br>
+		京东旗下网站：English Site拍拍网 网银在线
+	</p>
+	<img src="img/footer01.jpg">
+	<img src="img/footer02.jpg">
+	<img src="img/footer03.jpg">
+	<img src="img/footer04.jpg">
+</footer>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/index.js"></script>
+<script>
+	//调用轮播广告插件函数
+	$('#slider').carousel();
+</script>
+</body>
+</html>

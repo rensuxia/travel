@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/angular.js"></script>
+</head>
+<body>
+<div id="top">
+    <!--网页顶部-->
+    <div id="user-prefs">
+        <!--logo-->
+        <img src="img/logo.png">
+        <!--欢迎语-->
+        <p class="left">欢迎来到旅游网站</p>
+        <ul class="right">
+            <li id="welcome">
+                <a href="register.html">[注册]</a>
+                <a href="login.html">[登录]</a>
+            </li>
+            <li class="about">
+                <b></b>
+                <a href="#">关注我们</a>
+                <div id="about">
+                    <div class="lfzwebChat"></div>
+                    <div class="lklwebChat"></div>
+                </div>
+            </li>
+            <li class="service">
+                <b></b>
+                <a href="#">服务</a>
+                <ul id="service-items">
+                    <li>
+                        <a href="#">帮助中心</a>
+                    </li>
+                    <li>
+                        <a href="#">售后服务</a>
+                    </li>
+                    <li>
+                        <a href="#">在线服务</a>
+                    </li>
+                    <li>
+                        <a href="#">投诉中心</a>
+                    </li>
+                    <li>
+                        <a href="#">客服邮箱</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div id="container" ng-controller="myCtrl">
+        <form name="myForm" class="box" ng-submit="submitInfo()">
+            <div class="label_input">
+                <label for="username">用户名：</label>
+                <input ng-model="username" type="text" id="username" name="uname" placeholder="请输入您的用户名" required autofocus>
+                <span ng-show="myForm.uname.$error.required">请输入用户名</span>
+            </div>
+            <div class="label_input">
+                <label for="pwd">密&nbsp;&nbsp;码：</label>
+                <input ng-model="pwd" type="password" id="pwd" name="pwd" placeholder="请输入您的密码" required>
+                <span ng-show="myForm.pwd.$error.required">请输入您的密码</span>
+            </div>
+            <div class="label_input sex">
+                <label>性&nbsp;&nbsp;别：</label>
+                <input ng-model="sex" type="radio" name="sex" value="1">女
+                <input ng-model="sex" type="radio" name="sex" value="2">男
+                <input ng-model="sex" type="radio" name="sex" value="3" required>保密
+                <span ng-show="myForm.sex.$error.required">请选择性别</span>
+            </div>
+            <div class="label_input">
+                <label for="phone">电&nbsp;&nbsp;话：</label>
+                <input ng-model="phone" name="phone" type="tel" id="phone" placeholder="请输入您的电话号码" required>
+                <span ng-show="myForm.phone.$error.required">请输入电话号码</span>
+            </div>
+            <div class="label_input">
+                <label for="email">邮&nbsp;&nbsp;箱：</label>
+                <input ng-model="email" name="email" type="email" id="email" placeholder="请输入您的电子邮箱"required>
+                <span ng-show="myForm.email.$error.required">请输入正确格式的邮箱</span>
+            </div>
+            <div class="label_input">
+                <label>验证码：</label>
+                <input ng-model="valid" class="valid" type="text" name="valid" required>
+                <canvas id="c1">
+                    您的浏览器不支持canvas
+                </canvas>
+                <span ng-show="myForm.valid.$error.required">请输入验证码</span>
+            </div>
+            <div class="label_input btn">
+                <input ng-disabled="myForm.$invalid"  id="btnSubmit" type="submit" value="注册">
+                <input id="btnReset" type="reset" value="取消">
+            </div>
+        </form>
+    </div>
+<footer>
+    <div id="go">
+        <img src="img/lllll.gif" alt="">
+    </div>
+</footer>
+    <script src="js/Vcode.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/register.js"></script>
+    <script>
+        var app=angular.module('myApp',['ng']);
+        app.controller('myCtrl',function ($scope) {
+            $scope.submitInfo=function () {
+                console.log($scope.username,$scope.pwd);
+            }
+        })
+    </script>
+</body>
+</html>
